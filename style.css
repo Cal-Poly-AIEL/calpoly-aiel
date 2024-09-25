@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.pdf-container {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.pdf-container embed, 
+.pdf-container iframe {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
