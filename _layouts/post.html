@@ -23,11 +23,10 @@ layout: default
     {{ content }}
 
     {%- if page.pdf -%}
-      <p>
-        <a href="{{ site.url }}{{ site.baseurl }}/_pdfs/{{ page.pdf }}" download>Download PDF</a>
+      <object data="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" width="1000" height="1000" type="application/pdf"></object>
+      <p></p>
+        <a href="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" download>Download PDF</a>
       </p>
-      <object data="{{ site.url }}{{ site.baseurl }}/_pdfs/{{ page.pdf }}" width="1000" height="1000" type="application/pdf">
-      </object>
     {%- endif -%}
   </div>
 
