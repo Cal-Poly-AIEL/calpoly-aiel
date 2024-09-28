@@ -10,13 +10,25 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    {%- if page.author -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Author: {{ page.author }}</span></span>
+      {%- endif -%}</p>
+    {%- if page.email -%}
+      <span itemprop="email" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Contact: {{ page.email }}</span></span>
+    {%- endif -%}</p>
+
     {{ content }}
+
+    {%- if page.pdf -%}
+      <p>
+        <a href="{{ site.url }}{{ site.baseurl }}/_pdfs/{{ page.pdf }}" download>Download PDF</a>
+      </p>
+      <object data="{{ site.url }}{{ site.baseurl }}/_pdfs/{{ page.pdf }}" width="1000" height="1000" type="application/pdf">
+      </object>
+    {%- endif -%}
   </div>
 
   {%- if site.disqus.shortname -%}
