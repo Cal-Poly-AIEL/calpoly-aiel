@@ -13,21 +13,28 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {%- if page.author -%}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Author: {{ page.author }}</span></span>
-      {%- endif -%}</p>
-    {%- if page.email -%}
-      <span itemprop="email" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Contact: {{ page.email }}</span></span>
-    {%- endif -%}</p>
+      <div class="content-left">
+        {%- if page.author -%}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Author: {{ page.author }}</span></span>
+          {%- endif -%}</p>
+        {%- if page.email -%}
+          <span itemprop="email" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Contact: {{ page.email }}</span></span>
+        {%- endif -%}</p>
 
-    {{ content }}
+        {{ content }}
 
-    {%- if page.pdf -%}
-      <object data="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" width="1000" height="1000" type="application/pdf"></object>
-      <p></p>
-        <a href="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" download>Download PDF</a>
-      </p>
-    {%- endif -%}
+        {%- if page.pdf -%}
+        <p></p>
+            <a href="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" download>Download PDF</a>
+          </p>
+        {%- endif -%}
+    </div>
+
+    <div class="content-right">
+      {%- if page.pdf -%}
+        <object data="{{ site.url }}{{ site.baseurl }}/pdfs/{{ page.pdf }}" width="500" height="500" type="application/pdf"></object>
+      {%- endif -%}
+    </div>
   </div>
 
   {%- if site.disqus.shortname -%}

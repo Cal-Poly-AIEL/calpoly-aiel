@@ -194,3 +194,22 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vg { color: #008080; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
+
+.p-author {
+  font-size: large;
+}
+
+.post-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the columns */
+}
+
+.content-left {
+  flex: 1; /* Left column takes the available space */
+  padding-right: 20px; /* Optional: space between columns */
+}
+
+.content-right {
+  width: 400px; /* Fixed width for the PDF column */
+  padding-left: 20px; /* Optional: space between columns */
+}
