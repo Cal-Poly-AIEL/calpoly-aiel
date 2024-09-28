@@ -19,11 +19,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   This website hosts the Cal Poly Ai Ethics Lab. 
 
 # deploy
-baseurl: "/calpoly-aiel" # the subpath of your site, e.g. /blog
-url: "https://quinthemint.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#baseurl: "/calpoly-aiel" # the subpath of your site, e.g. /blog
+#url: "https://quinthemint.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-#baseurl: "" # the subpath of your site, e.g. /blog url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#url: ""
+baseurl: "" # the subpath of your site, e.g. /blog url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: ""
 twitter_username: jekyllrb
 github_username:  jekyll
 
