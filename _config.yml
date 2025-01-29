@@ -14,17 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Cal Poly AI/EL
-email: qupotter@calpoly.edu
+email:
 description: >- # this means to ignore newlines until "baseurl:"
   This website hosts the Cal Poly Ai Ethics Lab. 
 
 # deploy
 baseurl: "/calpoly-aiel" # the subpath of your site, e.g. /blog
-url: "https://quinthemint.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cal-poly-aiel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #baseurl: "" # the subpath of your site, e.g. /blog url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #url: ""
-github_username: quinthemint
+github_username: Cal-Poly-AIEL
 
 # Build settings
 markdown: kramdown
