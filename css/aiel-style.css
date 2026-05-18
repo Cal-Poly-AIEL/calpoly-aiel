@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background: #154734; /* Cal Poly green */
   padding: 1rem;
 }
@@ -24,8 +25,10 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -37,17 +40,30 @@ body {
   text-decoration: underline;
 }
 
+.nav-links a.active {
+  font-weight: 700;
+}
+
 /* Hero */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background: #f5f5f5;
+  padding: 4.5rem 1.5rem;
+  background:
+    linear-gradient(rgba(21, 71, 52, 0.68), rgba(21, 71, 52, 0.68)),
+    url("../assests/images/cal-poly-landscape.JPEG") center / cover no-repeat;
+  border-bottom: 1px solid #d7e4de;
 }
 
 .hero h1 {
   margin-bottom: 0.5rem;
   font-size: 2rem;
-  color: #154734;
+  color: white;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0 auto 1.25rem;
+  color: white;
 }
 
 /* Footer */
@@ -121,6 +137,51 @@ footer {
   line-height: 1.5;
 }
 
+/* Meetings and Projects */
+.meeting-section,
+.project-section {
+  margin-bottom: 2rem;
+}
+
+.meeting-card,
+.project-card {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.meeting-card h2,
+.project-card h3 {
+  margin-top: 0;
+  color: #2b6cb0;
+}
+
+.meeting-card p,
+.project-card p {
+  margin-bottom: 0;
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.topics-section h2 {
+  font-size: 1.25rem;
+}
+
+.topics-list {
+  font-size: 0.95rem;
+  margin: 1rem 0 0 1.2rem;
+  padding: 0;
+}
+
+.topics-list li {
+  margin-bottom: 0.7rem;
+}
+
 @media (max-width: 600px) {
   .person-card {
     flex-direction: column;
@@ -191,6 +252,45 @@ footer {
 .btn:hover {
   background-color: #4752c4;
   transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: white;
+  color: #154734;
+}
+
+.btn-primary:hover {
+  background-color: #eef4f1;
+}
+
+.join-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-email {
+  background-color: #154734;
+}
+
+.btn-email:hover {
+  background-color: #0f3527;
+}
+
+.btn-linkedin {
+  background-color: #0a66c2;
+}
+
+.btn-linkedin:hover {
+  background-color: #084f96;
+}
+
+.btn-instagram {
+  background-color: #c13584;
+}
+
+.btn-instagram:hover {
+  background-color: #9f2b6d;
 }
 
 /* About */
