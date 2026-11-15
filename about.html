@@ -3,85 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | AI Ethics Lab</title>
+    <title>About | Cal Poly AI Ethics Lab</title>
+    <meta
+      name="description"
+      content="About the Cal Poly AI Ethics Lab (AI/EL): our focus areas across paper discussions, faculty research, and grant and project opportunities."
+    />
     <link rel="stylesheet" href="css/aiel-style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">Cal Poly AI Ethics Lab</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Primary">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">AI/EL</span>
+          <span>Cal Poly AI Ethics Lab</span>
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
           <li><a href="people.html">People</a></li>
-          <li><a href="meetings.html">Meetings and Projects</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <h1>About</h1>
-      <p>
-        The Cal Poly <strong>AI Ethics Lab (AI/EL)</strong> seeks to promote
-        interdisciplinary conversations that investigate the distinctive
-        ethical, legal, and social challenges presented by emerging AI
-        technologies by:
-      </p>
-      <ul class="mission-list">
-        <li>
-          Connecting students with faculty and research opportunities in these
-          fields.
-        </li>
-        <li>
-          Developing papers and projects investigating these topics and pursuing
-          grant and conference opportunities.
-        </li>
-        <li>
-          Bridging the gap between ethical frameworks, policy, and technical
-          implementation in AI.
-        </li>
-      </ul>
+    <main id="main" class="container page-fade page-fade--scale">
+      <h1 class="page-title">About the Lab</h1>
 
-      <section class="about-section">
-        <h2>Paper Review and Discussions</h2>
+      <section class="panel about-lede" aria-label="Lab description">
         <p>
-          During our regular meetings, we select topical papers or current events related to the
-          ethical and societal implications of emerging AI technologies and use
-          these resources as a starting place for conversation. Within these
-          discussions, we aim to identify questions and solutions that we would
-          like to explore further in the form of research papers or technical
-          projects.
+          The Cal Poly <strong>AI Ethics Lab (AI/EL)</strong> seeks to promote
+          interdisciplinary conversations that investigate the distinctive
+          ethical, legal, and social challenges presented by emerging AI
+          technologies by:
         </p>
+        <ul class="mission-list">
+          <li>
+            Connecting students with faculty and research opportunities in these
+            fields.
+          </li>
+          <li>
+            Developing papers and projects investigating these topics and
+            pursuing grant and conference opportunities.
+          </li>
+          <li>
+            Bridging the gap between ethical frameworks, policy, and technical
+            implementation in AI.
+          </li>
+        </ul>
       </section>
 
-      <section class="about-section">
-        <h2>Faculty and Guest Speakers, Research</h2>
-        <p>
-          At AI/EL, we hope to build a network across disciplines at Cal Poly of
-          students and faculty working to further investigate AI ethics. We aim
-          to develop an ethically and technically literate student membership so
-          that when research opportunities arise, we are ready to meet the
-          challenge. Throughout the year, we also collaborate with faculty to
-          host guest presentations where members can learn more about ethical
-          frameworks, public policy, how AI is used in various disciplines, and the technical implementation of AI.
-        </p>
-      </section>
+      <section aria-labelledby="focus-heading" class="section">
+        <h2 id="focus-heading">Focus Areas</h2>
 
-      <section class="about-section">
-        <h2>Grant Research, Conference Papers, and Project Opportunities</h2>
-        <p>
-          For the problems the lab chooses to explore in depth, our goal is to
-          provide the resources and guidance needed for students to produce
-          meaningful research within the field of AI ethics. We believe that research in this field
-          must be view both from a holistic and interdisciplinary lens investigating problems
-          from ethical, regulatory, and technical perspectives.
-        </p>
+        <div class="focus-grid">
+          <article
+            class="focus-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <h3 class="focus-card__title">Paper Review and Discussions</h3>
+            <div class="focus-card__body">
+              During our regular meetings, we select topical papers or current
+              events related to the ethical and societal implications of
+              emerging AI technologies and use these resources as a starting
+              place for conversation. Within these discussions, we aim to
+              identify questions and solutions that we would like to explore
+              further in the form of research papers or technical projects.
+            </div>
+            <span class="focus-card__hint" aria-hidden="true">Hover to read more!</span>
+          </article>
+
+          <article
+            class="focus-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <h3 class="focus-card__title">Faculty and Guest Speakers, Research</h3>
+            <div class="focus-card__body">
+              At AI/EL, we hope to build a network across disciplines at Cal
+              Poly of students and faculty working to further investigate AI
+              ethics. We aim to develop an ethically and technically literate
+              student membership so that when research opportunities arise, we
+              are ready to meet the challenge. Throughout the year, we also
+              collaborate with faculty to host guest presentations where members
+              can learn more about ethical frameworks, public policy, how AI is
+              used in various disciplines, and the technical implementation of
+              AI.
+            </div>
+            <span class="focus-card__hint" aria-hidden="true">Hover to read more!</span>
+          </article>
+
+          <article
+            class="focus-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+          >
+            <h3 class="focus-card__title">
+              Grant Research, Conference Papers, and Project Opportunities
+            </h3>
+            <div class="focus-card__body">
+              For the problems the lab chooses to explore in depth, our goal is
+              to provide the resources and guidance needed for students to
+              produce meaningful research within the field of AI ethics. We
+              believe that research in this field must be viewed from both a
+              holistic and interdisciplinary lens, investigating problems from
+              ethical, regulatory, and technical perspectives.
+            </div>
+            <span class="focus-card__hint" aria-hidden="true">Hover to read more!</span>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <ul class="footer-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <small>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</small>
+      </div>
     </footer>
 
     <script src="js/aiel-script.js"></script>

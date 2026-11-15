@@ -3,31 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | AI Ethics Lab</title>
+    <title>Contact | Cal Poly AI Ethics Lab</title>
+    <meta
+      name="description"
+      content="Contact information for the Cal Poly AI Ethics Lab (AI/EL) and ways to join the community."
+    />
     <link rel="stylesheet" href="css/aiel-style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">Cal Poly AI Ethics Lab</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Primary">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">AI/EL</span>
+          <span>Cal Poly AI Ethics Lab</span>
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="people.html">People</a></li>
-          <li><a href="meetings.html">Meetings and Projects</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <h1>Contact</h1>
-      <p>
-        We’d love to connect with you! Whether you’re a student, faculty member,
-        or community partner, feel free to reach out or join our community.
+    <main id="main" class="container page-fade page-fade--scale">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-lede page-lede--wide">
+        We&rsquo;d love to connect with you. Whether you&rsquo;re a student,
+        faculty member, or community partner, feel free to reach out or join our
+        community.
       </p>
 
-      <section class="contact-section">
+      <section class="contact-grid" aria-label="Direct contacts">
         <div class="contact-card">
           <h2>Student Director</h2>
           <p class="contact-name">Weston Patrick</p>
@@ -43,45 +53,60 @@
         </div>
       </section>
 
-      <section class="join-section">
-        <h2>Interested in Joining?</h2>
+      <section class="join-section" aria-labelledby="join-heading">
+        <h2 id="join-heading">Interested in Joining?</h2>
         <p>
           The AI Ethics Lab welcomes all Cal Poly students interested in
           exploring the ethical, social, and technical dimensions of artificial
           intelligence.
         </p>
         <p>
-          Join our email list or community Discord to connect with lab members and learn about
-          upcoming meetings and projects:
+          Join our email list or community Discord to connect with lab members
+          and hear about upcoming meetings and projects:
         </p>
         <div class="join-actions">
-          <a href="https://discord.gg/5Qcpn6sWw6" target="_blank" class="btn"
-            >Join Our Discord</a
+          <a
+            href="https://discord.gg/5Qcpn6sWw6"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--discord"
+            >Join our Discord</a
           >
           <a
             href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq57ktEIKWjWZIsCKoKFF_KxpUNjVVTFJJTlo3MlFDN01KWFNHVVRZVVBHMy4u"
             target="_blank"
-            class="btn btn-email"
+            rel="noopener"
+            class="btn"
             >Join our Email List</a
           >
           <a
             href="https://www.linkedin.com/company/cal-poly-ai-ethics-lab"
             target="_blank"
-            class="btn btn-linkedin"
+            rel="noopener"
+            class="btn btn--linkedin"
             >Lab LinkedIn</a
           >
           <a
             href="https://www.instagram.com/calpolyaiel/"
             target="_blank"
-            class="btn btn-instagram"
+            rel="noopener"
+            class="btn btn--instagram"
             >Lab Instagram</a
           >
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <ul class="footer-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <small>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</small>
+      </div>
     </footer>
 
     <script src="js/aiel-script.js"></script>

@@ -4,51 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cal Poly AI Ethics Lab</title>
+    <meta
+      name="description"
+      content="The Cal Poly AI Ethics Lab (AI/EL) is an interdisciplinary student and faculty partnership investigating the ethical, legal, and social challenges of emerging AI technologies."
+    />
     <link rel="stylesheet" href="css/aiel-style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <nav class="navbar">
-        <a href="index.html" class="logo">Cal Poly AI Ethics Lab</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Primary">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">AI/EL</span>
+          <span>Cal Poly AI Ethics Lab</span>
+        </a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="people.html">People</a></li>
-          <li><a href="meetings.html">Meetings and Projects</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <h1>Welcome to the Cal Poly Artificial Intelligence Ethics Lab</h1>
-      <p>
-        Cal Poly students exploring an ethical AI future with a technical
-        foundation.
-      </p>
-      <a href="about.html" class="btn btn-primary">Learn More</a>
-    </section>
+    <main id="main" class="page-fade page-fade--scale">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-panel">
+          <div class="hero-body">
+            <h1 id="hero-title">Cal Poly AI Ethics Lab</h1>
+            <p>
+              An interdisciplinary student and faculty partnership exploring the
+              ethical, legal, and social challenges of emerging AI.
+            </p>
+            <a href="about.html" class="btn btn--on-image">Learn more</a>
+          </div>
+        </div>
+      </section>
 
-    <!-- Main -->
-    <main class="container">
-      <h2>Welcome</h2>
-      <p>
-        The Cal Poly Artificial Intelligence Ethics Lab (AI/EL) is an
-        interdisciplinary student and faculty partnership designed to
-        investigate the distinctive ethical, legal, and social challenges
-        presented by emerging AI technologies. The lab is an opportunity for
-        students to engage in conversations focused on addressing these
-        challenges and the technical realities of any proposed solutions. Cal
-        Poly AI/EL also provides an opportunity for students to learn about
-        research in this field and connect with faculty about future endeavors.
-      </p>
+      <section class="home-intro" aria-label="About the lab">
+        <p>
+          The Cal Poly Artificial Intelligence Ethics Lab (AI/EL) is an
+          interdisciplinary student and faculty partnership designed to
+          investigate the distinctive ethical, legal, and social challenges
+          presented by emerging AI technologies. The lab is an opportunity for
+          students to engage in conversations focused on addressing these
+          challenges and the technical realities of any proposed solutions. Cal
+          Poly AI/EL also provides an opportunity for students to learn about
+          research in this field and connect with faculty about future
+          endeavors.
+        </p>
+      </section>
+
+      <section class="home-cards" aria-label="Explore the lab">
+        <a class="home-card" href="people.html">
+          <div>
+            <h3>People</h3>
+            <p>Meet the students and faculty leading the lab this year.</p>
+          </div>
+          <span class="home-card-cta">Meet the team</span>
+        </a>
+        <a class="home-card" href="meetings-projects.html#meetings">
+          <div>
+            <h3>Meetings</h3>
+            <p>See when we meet and what we&rsquo;ve been discussing recently.</p>
+          </div>
+          <span class="home-card-cta">See meetings</span>
+        </a>
+        <a class="home-card" href="meetings-projects.html#projects">
+          <div>
+            <h3>Projects</h3>
+            <p>Explore current research, reports, and lab initiatives.</p>
+          </div>
+          <span class="home-card-cta">Browse projects</span>
+        </a>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <ul class="footer-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="meetings-projects.html">Meetings &amp; Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <small>&copy; <span id="year"></span> Cal Poly AI Ethics Lab</small>
+      </div>
     </footer>
 
     <script src="js/aiel-script.js"></script>
