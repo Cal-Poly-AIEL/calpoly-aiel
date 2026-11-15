@@ -263,21 +263,17 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   font-size: 1rem;
   border: 1px solid transparent;
-  transition: background var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
   cursor: pointer;
 }
-.btn:hover { background: var(--btn-bg-hover); color: #fff; transform: translateY(-1px); }
-.btn:active { transform: translateY(0); }
+.btn:hover { background: var(--btn-bg-hover); color: #fff; }
 .btn:disabled,
 .btn[aria-disabled="true"] {
   opacity: 0.7;
   cursor: not-allowed;
-  transform: none;
 }
 .btn:disabled:hover,
 .btn[aria-disabled="true"]:hover {
   background: var(--btn-bg);
-  transform: none;
 }
 
 .btn--ghost {
@@ -497,31 +493,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .focus-card {
-  position: relative;
   min-height: 380px;
-  border: 5px solid var(--color-green-700);
+  border: 1px solid var(--color-green-700);
   background: var(--color-surface);
   color: var(--color-text);
   padding: 1.75rem 1.5rem;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  cursor: default;
-  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
-}
-.focus-card:hover,
-.focus-card:focus-visible,
-.focus-card.is-open {
-  transform: translateY(-3px);
-  border-color: var(--color-green-900);
-}
-.focus-card:focus { outline: none; }
-.focus-card:focus-visible {
-  outline: 3px solid var(--color-green-500);
-  outline-offset: 4px;
+  gap: 0.9rem;
 }
 
 .focus-card__title {
@@ -532,60 +514,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .focus-card__body {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  margin-top: 0;
-  padding-right: 0.4rem;
   color: #24292d;
   font-size: 1rem;
   line-height: 1.6;
   text-align: left;
+  overflow-y: auto;
+  padding-right: 0.4rem;
   scrollbar-width: thin;
   scrollbar-color: var(--color-green-500) transparent;
-  transition: opacity var(--dur-slow) var(--ease),
-              max-height var(--dur-slow) var(--ease),
-              margin-top var(--dur-slow) var(--ease);
 }
 .focus-card__body::-webkit-scrollbar { width: 6px; }
 .focus-card__body::-webkit-scrollbar-thumb { background: var(--color-green-500); }
 .focus-card__body::-webkit-scrollbar-track { background: transparent; }
-
-.focus-card:hover .focus-card__body,
-.focus-card:focus-visible .focus-card__body,
-.focus-card:focus-within .focus-card__body,
-.focus-card.is-open .focus-card__body {
-  max-height: 260px;
-  opacity: 1;
-  margin-top: 0.9rem;
-  overflow-y: auto;
-}
-
-.focus-card__hint {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.9rem;
-  font-size: 0.95rem;
-  color: var(--color-muted);
-  transition: opacity var(--dur) var(--ease);
-}
-.focus-card:hover .focus-card__hint,
-.focus-card:focus-within .focus-card__hint,
-.focus-card.is-open .focus-card__hint {
-  opacity: 0;
-}
-
-/* Devices without hover: always reveal the body */
-@media (hover: none) {
-  .focus-card__body {
-    max-height: 260px;
-    opacity: 1;
-    margin-top: 0.9rem;
-    overflow-y: auto;
-  }
-  .focus-card__hint { display: none; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .focus-card,
@@ -617,11 +557,6 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 1.4rem;
   margin-bottom: 1.1rem;
   height: 300px;
-  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
-}
-.person-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-blue-dark);
 }
 
 .person-info {
@@ -656,17 +591,9 @@ img { max-width: 100%; height: auto; display: block; }
   flex-shrink: 0;
 }
 
-/* Photo fallback when src is empty/missing */
-.person-photo[src=""],
-.person-photo:not([src]),
+/* Photo fallback when src is empty/missing — swapped in by JS */
 .person-photo.no-photo {
   background: var(--color-green-100);
-  position: relative;
-}
-.person-photo.no-photo::after {
-  content: attr(data-initials);
-  position: absolute;
-  inset: 0;
   display: grid;
   place-items: center;
   font-family: var(--font-serif);
@@ -729,7 +656,6 @@ img { max-width: 100%; height: auto; display: block; }
 .topics-list li {
   background: var(--color-surface);
   border: 1px solid var(--color-blue);
-  border-left: 4px solid var(--color-green-500);
   padding: 0.8rem 1rem;
 }
 
@@ -785,7 +711,7 @@ img { max-width: 100%; height: auto; display: block; }
 .join-section {
   margin-top: 2.5rem;
   padding: 2rem;
-  background: var(--color-cream);
+  background: var(--color-surface);
   border: 1px solid var(--color-blue);
 }
 .join-section h2 { margin-top: 0; }
