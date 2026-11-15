@@ -8,44 +8,21 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Fade page content in on load
+  // Fade page content in on load (home only)
   document.querySelectorAll(".page-fade").forEach((el) => {
     if (prefersReducedMotion) {
       el.classList.add("is-visible");
       return;
     }
-    // Next frame so the initial opacity:0 is committed before we transition.
     requestAnimationFrame(() => {
       requestAnimationFrame(() => el.classList.add("is-visible"));
     });
   });
 
-  // About page focus-area cards: click / Enter / Space toggles reveal.
-  // Hover and keyboard focus also open them via CSS.
-  document.querySelectorAll(".focus-card").forEach((card) => {
-    const sync = () => {
-      card.setAttribute(
-        "aria-expanded",
-        card.classList.contains("is-open") ? "true" : "false"
-      );
-    };
-    const close = () => { card.classList.remove("is-open"); sync(); };
-    const toggle = () => { card.classList.toggle("is-open"); sync(); };
-
-    card.addEventListener("click", toggle);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        toggle();
-      }
-      if (e.key === "Escape") close();
-    });
-    card.addEventListener("mouseleave", () => {
-      if (!card.matches(":focus-within")) close();
-    });
-  });
-
-  // Person photos: replace broken/empty images with initials placeholder
+  // Person photos: replace broken/empty images with an initials tile.
+  // We swap the <img> for a <div> so the placeholder renders cleanly
+  // (pseudo-elements can't render on replaced <img> elements, and the
+  // alt text would otherwise appear as fallback).
   document.querySelectorAll(".person-photo").forEach((img) => {
     const nameEl = img.closest(".person-card")?.querySelector(".person-name");
     const name = nameEl ? nameEl.textContent.trim() : "";
@@ -56,18 +33,21 @@
       .map((w) => w[0].toUpperCase())
       .join("");
 
-    const markMissing = () => {
-      img.classList.add("no-photo");
-      img.setAttribute("data-initials", initials || "•");
-      img.removeAttribute("src");
-      img.alt = name ? `${name} (no photo available)` : "No photo available";
+    const swapToInitials = () => {
+      if (!img.parentNode) return;
+      const tile = document.createElement("div");
+      tile.className = "person-photo no-photo";
+      tile.setAttribute("role", "img");
+      tile.setAttribute("aria-label", name || "");
+      tile.textContent = initials || "";
+      img.replaceWith(tile);
     };
 
     const src = img.getAttribute("src");
     if (!src || src.endsWith("/")) {
-      markMissing();
+      swapToInitials();
     } else {
-      img.addEventListener("error", markMissing, { once: true });
+      img.addEventListener("error", swapToInitials, { once: true });
     }
   });
 })();
